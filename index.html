@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>إحجزلي — عيادتك تستحق أن تكون ممتلئة كل يوم</title>
+<link rel="icon" type="image/png" href="assets/ehjezli-logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+html,body{margin:0;padding:0;scroll-behavior:smooth;background:#04111F;}
+*{box-sizing:border-box;}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.5);}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+@keyframes floatBlobA{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(40px,-30px) scale(1.12);}}
+@keyframes floatBlobB{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,30px) scale(1.15);}}
+@keyframes gridDrift{0%{background-position:0 0;}100%{background-position:64px 64px;}}
+@keyframes scanMove{0%{transform:translateY(-100%);opacity:0;}10%{opacity:0.6;}90%{opacity:0.6;}100%{transform:translateY(100vh);opacity:0;}}
+@keyframes shimmerBtn{0%{background-position:0% 50%;}100%{background-position:200% 50%;}}
+@keyframes ringPulse{0%{transform:scale(0.7);opacity:0.9;}100%{transform:scale(1.5);opacity:0;}}
+@keyframes popIn{0%{transform:scale(0.85);}60%{transform:scale(1.06);}100%{transform:scale(1);}}
+@keyframes particleUp{0%{transform:translateY(0) scale(1);opacity:0;}8%{opacity:1;}55%{opacity:0.7;}100%{transform:translateY(-115vh) scale(0.6);opacity:0;}}
+@keyframes glowPulse{0%,100%{box-shadow:0 8px 40px rgba(46,158,245,0.4),0 0 0 1px rgba(46,158,245,0.2);}50%{box-shadow:0 12px 56px rgba(46,158,245,0.65),0 0 0 1px rgba(46,158,245,0.35);}}
+@keyframes rotateSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+</style>
+<style>
+:root{
+  --sectionPad:100px 24px; --heroPad:150px 24px 90px; --offerBoxPad:56px 48px;
+  --stepLineRight:48px; --compareCellPad:16px 24px; --compareHeadPad:18px 24px;
+  --compareFontSize:15px; --navLinksDisplay:flex;
+  --stepGridCols:96px 1fr; --stepGap:36px; --stepNumSize:96px; --stepNumFont:30px;
+}
+@media (max-width:779px){
+  :root{
+    --sectionPad:56px 20px; --heroPad:130px 18px 64px; --offerBoxPad:32px 22px;
+    --stepLineRight:29px; --compareCellPad:11px 12px; --compareHeadPad:13px 12px;
+    --compareFontSize:12.5px; --navLinksDisplay:none;
+    --stepGridCols:58px 1fr; --stepGap:18px; --stepNumSize:58px; --stepNumFont:18px;
+  }
+}
+</style>
+
+</head>
+<body>
+<div dir="rtl" style="direction:rtl;font-family:'Cairo',sans-serif;background:#04111F;color:#FFFFFF;overflow-x:hidden;line-height:1.7;position:relative;min-height:100vh;">
+
+  <!-- PARTICLE FIELD -->
+  <div style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;">
+    
+      <div style="position:absolute;bottom:-40px;left:3%;width:3px;height:3px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:14s;animation-delay:0.0s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:9%;width:5px;height:5px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:17s;animation-delay:1.6s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:16%;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:20s;animation-delay:3.2s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:22%;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:23s;animation-delay:4.8s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:28%;width:3px;height:3px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:26s;animation-delay:6.4s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:35%;width:5px;height:5px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:29s;animation-delay:8.0s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:41%;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:14s;animation-delay:9.6s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:47%;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:17s;animation-delay:11.2s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:53%;width:3px;height:3px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:20s;animation-delay:0.0s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:60%;width:5px;height:5px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:23s;animation-delay:1.6s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:66%;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:26s;animation-delay:3.2s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:72%;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:29s;animation-delay:4.8s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:79%;width:3px;height:3px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:14s;animation-delay:6.4s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:85%;width:5px;height:5px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:17s;animation-delay:8.0s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:91%;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:20s;animation-delay:9.6s;"></div>
+    
+      <div style="position:absolute;bottom:-40px;left:98%;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle,rgba(125,200,250,0.9),rgba(46,158,245,0.1));box-shadow:0 0 12px rgba(46,158,245,0.7);animation-name:particleUp;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:23s;animation-delay:11.2s;"></div>
+    
+  </div>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/966000000000" target="_blank" rel="noopener" style="position:fixed;bottom:88px;left:20px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 24px rgba(37,211,102,0.5);z-index:998;text-decoration:none;">💬</a>
+
+  <!-- SCROLL PROGRESS -->
+  <div data-role="progress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#2E9EF5,#7DC8FA);z-index:1001;box-shadow:0 0 12px rgba(46,158,245,0.6);transition:width 0.1s linear;"></div>
+
+  <!-- STICKY BAR -->
+  <div data-role="sticky" style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-top:2px solid rgba(46,158,245,0.2);padding:14px 24px;display:flex;justify-content:center;align-items:center;gap:20px;z-index:999;transform:translateY(100%);transition:transform 0.4s ease;box-shadow:0 -4px 24px rgba(0,0,0,0.12);flex-wrap:wrap;">
+    <p style="font-size:15px;font-weight:700;color:#0D2235;margin:0;">🔥 30 يوماً مجاناً — نجيبلك مرضى حقيقيين أو لا تدفع شيئاً</p>
+    <a href="booking.html" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5,#5BB8F8);background-size:200% auto;color:#fff;font-family:'Cairo',sans-serif;font-size:15px;font-weight:900;padding:12px 28px;border-radius:10px;text-decoration:none;">احجز استشارتك الآن</a>
+  </div>
+
+  <!-- NAV -->
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(4,17,31,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(46,158,245,0.18);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 24px rgba(0,0,0,0.25);">
+    <a href="#hero" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:900;font-size:17px;">
+      <img src="assets/ehjezli-logo.png" alt="إحجزلي" style="width:34px;height:34px;border-radius:10px;box-shadow:0 0 18px rgba(46,158,245,0.5);">
+      إحجزلي
+    </a>
+    <div style="display:var(--navLinksDisplay);gap:32px;align-items:center;font-size:14px;font-weight:700;color:#EAF5FF;">
+      <a href="#pain" style="color:#EAF5FF;text-decoration:none;">المشكلة</a>
+      <a href="#solution" style="color:#EAF5FF;text-decoration:none;">الحل</a>
+      <a href="#proof" style="color:#EAF5FF;text-decoration:none;">النتائج</a>
+      <a href="#offer" style="color:#EAF5FF;text-decoration:none;">العرض</a>
+      <a href="#faq" style="color:#EAF5FF;text-decoration:none;">الأسئلة</a>
+    </div>
+    <a href="booking.html" style="background:linear-gradient(135deg,#1A7ED4,#2E9EF5);color:#fff;font-family:'Cairo',sans-serif;font-size:13px;font-weight:800;padding:10px 18px;border-radius:9px;text-decoration:none;box-shadow:0 4px 20px rgba(46,158,245,0.45);white-space:nowrap;">ابدأ مجاناً 🚀</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:var(--heroPad);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 50% -10%,rgba(46,158,245,0.22) 0%,transparent 65%),radial-gradient(ellipse 50% 40% at 90% 90%,rgba(26,126,212,0.12) 0%,transparent 55%),#04111F;z-index:0;"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(46,158,245,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(46,158,245,0.06) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 70%);z-index:0;animation:gridDrift 6s linear infinite;"></div>
+    <div style="position:absolute;top:-220px;right:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(46,158,245,0.28),transparent 70%);filter:blur(30px);z-index:0;animation:floatBlobA 14s ease-in-out infinite;"></div>
+    <div style="position:absolute;bottom:-260px;left:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(26,126,212,0.22),transparent 70%);filter:blur(30px);z-index:0;animation:floatBlobB 17s ease-in-out infinite;"></div>
+    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(125,200,250,0.9),transparent);animation:scanMove 5s linear infinite;z-index:1;"></div>
+
+    <div style="position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;">
+      <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(46,158,245,0.1);border:1px solid rgba(46,158,245,0.32);border-radius:100px;padding:9px 22px;font-size:13px;font-weight:700;color:#7DC8FA;margin-bottom:32px;letter-spacing:0.4px;animation:fadeDown 0.7s ease both;">
+        <span style="width:8px;height:8px;background:#1DB954;border-radius:50%;box-shadow:0 0 8px #1DB954;animation:pulseDot 2s ease infinite;"></span>
+        نعمل مع عيادات الأسنان والتجميل في 🇸🇦 السعودية و 🇦🇪 الإمارات — نجهّز لك مرضى جاهزين لبدء العلاج
+      </div>
+
+      <h1 style="font-size:clamp(38px,6.5vw,74px);font-weight:900;line-height:1.15;margin:0 0 10px;max-width:960px;animation:fadeUp 0.8s 0.1s ease both;">
+        <span style="display:block;color:#FFFFFF;">عيادتك تستحق أن تكون</span>
+        <span style="display:block;color:#2E9EF5;">ممتلئة كل يوم.</span>
+        <span style="display:block;font-size:clamp(26px,4vw,46px);font-weight:700;color:#7A9AB5;margin-top:10px;">ونحن نضمن ذلك — أو لا تدفع شيئاً.</span>
+      </h1>
+
+      <p style="font-size:clamp(17px,2.2vw,24px);font-weight:700;color:#EAF5FF;margin:22px 0 18px;animation:fadeUp 0.8s 0.2s ease both;">
+        إعلانات مدروسة · سنتر حجوزات يعمل عنك · متابعة واتساب تضمن الحضور
+      </p>
+
+      <p style="font-size:clamp(15px,1.8vw,19px);color:#7A9AB5;max-width:720px;line-height:1.9;margin-bottom:40px;animation:fadeUp 0.8s 0.3s ease both;">
+        معظم العيادات تصرف على الإعلانات وتجي لها أرقام كثيرة — لكن <strong style="color:#fff;">ما أحد يحجز.</strong><br>
+        نحن لا نوصّل لك ليدز وندير ظهرنا.<br>
+        <strong style="color:#fff;">نحن نتصل، نحجز، ونتابع حتى يجلس المريض في كرسيك.</strong>
+      </p>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp 0.8s 0.4s ease both;">
+        <a href="booking.html" style="display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5,#5BB8F8,#1A7ED4);background-size:250% auto;color:#fff;font-family:'Cairo',sans-serif;font-size:19px;font-weight:900;padding:20px 52px;border-radius:14px;text-decoration:none;letter-spacing:0.3px;animation:shimmerBtn 4s linear infinite,glowPulse 3s ease-in-out infinite;">🚀 ابدأ تجربتك المجانية — 30 يوماً</a>
+      </div>
+
+      <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:48px;margin-top:76px;padding-top:44px;border-top:1px solid rgba(255,255,255,0.08);max-width:900px;animation:fadeUp 0.8s 0.5s ease both;">
+        
+          <div data-stat="" style="text-align:center;">
+            <span data-stat-n="" style="font-size:46px;font-weight:900;color:#2E9EF5;line-height:1;display:inline-block;">+200</span>
+            <span style="display:block;font-size:13px;color:#7A9AB5;margin-top:5px;font-weight:500;">عيادة تعمل معنا</span>
+          </div>
+        
+          <div data-stat="" style="text-align:center;">
+            <span data-stat-n="" style="font-size:46px;font-weight:900;color:#2E9EF5;line-height:1;display:inline-block;">+15,000</span>
+            <span style="display:block;font-size:13px;color:#7A9AB5;margin-top:5px;font-weight:500;">موعد تم حجزه</span>
+          </div>
+        
+          <div data-stat="" style="text-align:center;">
+            <span data-stat-n="" style="font-size:46px;font-weight:900;color:#2E9EF5;line-height:1;display:inline-block;">72%</span>
+            <span style="display:block;font-size:13px;color:#7A9AB5;margin-top:5px;font-weight:500;">نسبة حضور المرضى</span>
+          </div>
+        
+          <div data-stat="" style="text-align:center;">
+            <span data-stat-n="" style="font-size:46px;font-weight:900;color:#2E9EF5;line-height:1;display:inline-block;">4.8×</span>
+            <span style="display:block;font-size:13px;color:#7A9AB5;margin-top:5px;font-weight:500;">متوسط العائد على الإنفاق</span>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(46,158,245,0.25),transparent);position:relative;z-index:2;"></div>
+
+  <!-- PAIN -->
+  <div id="pain" style="background:#071828;padding:var(--sectionPad);position:relative;z-index:2;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div data-reveal="" style="margin-top:52px;padding:36px 40px;background:rgba(232,69,60,0.07);border:1px solid rgba(232,69,60,0.22);border-right:4px solid #E8453C;border-radius:16px;font-size:clamp(18px,2.5vw,26px);font-weight:800;color:#fff;line-height:1.6;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">
+        <div>المشكلة مو في الإعلانات — <span style="color:#E8453C;">المشكلة أنك تدفع ثمن الاهتمام</span> ولا تملك نظاماً يحوّله إلى فلوس في حسابك.</div>
+        <div style="margin-top:16px;font-size:clamp(15px,2vw,21px);color:#EAF5FF;font-weight:600;">الحل البسيط؟ <strong style="color:#2E9EF5;">نظام متكامل يشتغل عنك من أول كليك للإعلان حتى يدخل المريض بابك.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(46,158,245,0.25),transparent);position:relative;z-index:2;"></div>
+
+  <!-- SOLUTION -->
+  <section id="solution" style="padding:var(--sectionPad);max-width:1100px;margin:0 auto;position:relative;z-index:2;">
+    <div data-reveal="" style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#7DC8FA;border:1px solid rgba(46,158,245,0.4);padding:5px 14px;border-radius:4px;margin-bottom:22px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">النظام</div>
+    <h2 data-reveal="" style="font-size:clamp(30px,4.5vw,54px);font-weight:900;line-height:1.2;margin:0 0 18px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">كيف يعمل <span style="color:#2E9EF5;">نظام إحجزلي</span> بالضبط</h2>
+    <p data-reveal="" style="font-size:clamp(16px,2vw,20px);color:#7A9AB5;line-height:1.85;max-width:680px;margin:0;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">لسنا وكالة إعلانات تأخذ فلوسك وتختفي. نحن شريكك في النمو — نشتغل فقط لو أنت تكسب.</p>
+
+    <div style="display:flex;flex-direction:column;gap:0;margin-top:60px;position:relative;">
+      <div style="position:absolute;top:0;right:var(--stepLineRight);width:2px;height:100%;background:linear-gradient(to bottom,#2E9EF5,rgba(46,158,245,0.05));"></div>
+      
+        <div data-reveal="" style="display:grid;grid-template-columns:var(--stepGridCols);gap:var(--stepGap);align-items:flex-start;padding-bottom:64px;position:relative;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 0ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 0ms;">
+          <div style="width:var(--stepNumSize);height:var(--stepNumSize);border-radius:50%;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);display:flex;align-items:center;justify-content:center;font-size:var(--stepNumFont);font-weight:900;color:#fff;flex-shrink:0;position:relative;z-index:1;box-shadow:0 0 32px rgba(46,158,245,0.4);">١</div>
+          <div style="padding-top:22px;">
+            <h3 style="font-size:22px;font-weight:900;color:#fff;margin:0 0 12px;">نبني "آلة الجذب" الخاصة بعيادتك</h3>
+            <p style="font-size:16px;color:#7A9AB5;line-height:1.85;margin:0;">ننشئ حملات إعلانية مصممة بدقة جراحية لعيادتك تحديداً — مو قوالب جاهزة. نستهدف المريض الذي يبحث فعلاً عن زراعة أسنان، قشور، بوتوكس، أو جلسة تجميل، في منطقتك وبالسعر الذي يتوقعه.</p>
+            <span style="display:inline-block;margin-top:14px;background:rgba(46,158,245,0.1);border:1px solid rgba(46,158,245,0.25);border-radius:8px;padding:8px 16px;font-size:14px;color:#7DC8FA;font-weight:700;">📍 Meta · Google · TikTok · Snapchat</span>
+          </div>
+        </div>
+      
+        <div data-reveal="" style="display:grid;grid-template-columns:var(--stepGridCols);gap:var(--stepGap);align-items:flex-start;padding-bottom:64px;position:relative;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 90ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 90ms;">
+          <div style="width:var(--stepNumSize);height:var(--stepNumSize);border-radius:50%;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);display:flex;align-items:center;justify-content:center;font-size:var(--stepNumFont);font-weight:900;color:#fff;flex-shrink:0;position:relative;z-index:1;box-shadow:0 0 32px rgba(46,158,245,0.4);">٢</div>
+          <div style="padding-top:22px;">
+            <h3 style="font-size:22px;font-weight:900;color:#fff;margin:0 0 12px;">نحن من يتصل بالمريض — في أقل من 5 دقائق</h3>
+            <p style="font-size:16px;color:#7A9AB5;line-height:1.85;margin:0;">بمجرد وصول أي استفسار، فريق سنتر الحجوزات المتخصص لدينا — المدرّب على لغة المرضى، وعلى أسعارك وخدماتك تحديداً — يتصل بالمريض بنفسه خلال دقائق. لا ننتظر، ولا نترك المهمة لعيادتك. كل مريض مهتم يتحوّل لموعد مؤكد في أجندة عيادتك مباشرةً.</p>
+            <span style="display:inline-block;margin-top:14px;background:rgba(46,158,245,0.1);border:1px solid rgba(46,158,245,0.25);border-radius:8px;padding:8px 16px;font-size:14px;color:#7DC8FA;font-weight:700;">⚡ نتصل بالمريض خلال أقل من 5 دقائق</span>
+          </div>
+        </div>
+      
+        <div data-reveal="" style="display:grid;grid-template-columns:var(--stepGridCols);gap:var(--stepGap);align-items:flex-start;padding-bottom:64px;position:relative;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 180ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 180ms;">
+          <div style="width:var(--stepNumSize);height:var(--stepNumSize);border-radius:50%;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);display:flex;align-items:center;justify-content:center;font-size:var(--stepNumFont);font-weight:900;color:#fff;flex-shrink:0;position:relative;z-index:1;box-shadow:0 0 32px rgba(46,158,245,0.4);">٣</div>
+          <div style="padding-top:22px;">
+            <h3 style="font-size:22px;font-weight:900;color:#fff;margin:0 0 12px;">متابعة واتساب تضمن أن المريض يحضر فعلاً</h3>
+            <p style="font-size:16px;color:#7A9AB5;line-height:1.85;margin:0;">أكثر الوكالات تحجز لك موعداً وتترك المريض وحده — فيغيب. نحن نرسل له تسلسل رسائل واتساب مدروس يذكّره، يبني ثقته بعيادتك، ويعالج أي تردد.</p>
+            <span style="display:inline-block;margin-top:14px;background:rgba(46,158,245,0.1);border:1px solid rgba(46,158,245,0.25);border-radius:8px;padding:8px 16px;font-size:14px;color:#7DC8FA;font-weight:700;">📲 72% معدل حضور — مقابل 40% في السوق</span>
+          </div>
+        </div>
+      
+        <div data-reveal="" style="display:grid;grid-template-columns:var(--stepGridCols);gap:var(--stepGap);align-items:flex-start;padding-bottom:64px;position:relative;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 270ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 270ms;">
+          <div style="width:var(--stepNumSize);height:var(--stepNumSize);border-radius:50%;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);display:flex;align-items:center;justify-content:center;font-size:var(--stepNumFont);font-weight:900;color:#fff;flex-shrink:0;position:relative;z-index:1;box-shadow:0 0 32px rgba(46,158,245,0.4);">٤</div>
+          <div style="padding-top:22px;">
+            <h3 style="font-size:22px;font-weight:900;color:#fff;margin:0 0 12px;">تقارير حية — تعرف بالضبط أين يذهب كل ريال ودرهم</h3>
+            <p style="font-size:16px;color:#7A9AB5;line-height:1.85;margin:0;">داشبورد حي يومي يُظهر لك: كم إعلان وصل، كم اتصال تم، كم موعد حُجز، كم مريض حضر، وكم إيراد جاء. فقط نتائج مقيسة وشفافة.</p>
+            <span style="display:inline-block;margin-top:14px;background:rgba(46,158,245,0.1);border:1px solid rgba(46,158,245,0.25);border-radius:8px;padding:8px 16px;font-size:14px;color:#7DC8FA;font-weight:700;">📊 تقرير يومي + مدير حساب مخصص لك</span>
+          </div>
+        </div>
+      
+    </div>
+  </section>
+
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(46,158,245,0.25),transparent);position:relative;z-index:2;"></div>
+
+  <!-- PROOF -->
+  <div id="proof" style="background:#071828;padding:var(--sectionPad);position:relative;z-index:2;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div data-reveal="" style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#7DC8FA;border:1px solid rgba(46,158,245,0.4);padding:5px 14px;border-radius:4px;margin-bottom:22px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">النتائج</div>
+      <h2 data-reveal="" style="font-size:clamp(30px,4.5vw,54px);font-weight:900;line-height:1.2;margin:0 0 18px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">أرقام <span style="color:#2E9EF5;">لا تكذب</span></h2>
+      <p data-reveal="" style="font-size:clamp(16px,2vw,20px);color:#7A9AB5;line-height:1.85;max-width:680px;margin:0;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">لا نبيعك حلماً — نعرض عليك نتائج موثّقة حققها عملاؤنا في السعودية والإمارات.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:24px;margin-top:52px;">
+        
+          <div data-reveal="" style="background:#0D2235;border:1px solid rgba(255,255,255,0.08);border-radius:22px;padding:36px;position:relative;overflow:hidden;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 0ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 0ms;">
+            <span style="font-size:54px;font-weight:900;color:#2E9EF5;line-height:1;display:block;">47</span>
+            <span style="display:block;font-size:14px;color:#7A9AB5;margin:4px 0 20px;">موعد زراعة في الشهر الأول فقط</span>
+            <p style="font-size:15px;color:#EAF5FF;line-height:1.8;margin:0;">عيادة أسنان في الرياض كانت تحجز 8 إلى 10 مواعيد زراعة شهرياً بكل جهودها. بعد 30 يوماً من تشغيل نظامنا؟ وصلت لـ 47 موعداً — بنفس الفريق وبدون أي تغيير في العيادة.</p>
+            <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:13px;color:#2E9EF5;font-weight:700;">🏥 عيادة أسنان متخصصة — الرياض</span>
+          </div>
+        
+          <div data-reveal="" style="background:#0D2235;border:1px solid rgba(255,255,255,0.08);border-radius:22px;padding:36px;position:relative;overflow:hidden;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 90ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 90ms;">
+            <span style="font-size:54px;font-weight:900;color:#2E9EF5;line-height:1;display:block;">3.2×</span>
+            <span style="display:block;font-size:14px;color:#7A9AB5;margin:4px 0 20px;">مضاعفة الإيرادات في 60 يوماً</span>
+            <p style="font-size:15px;color:#EAF5FF;line-height:1.8;margin:0;">مركز تجميل في دبي ما كان يتجاوز 25 جلسة شهرياً. بعد شهرين من تطبيق النظام تجاوز 80 جلسة — وصاحب المركز قال "الفرق الوحيد هو إحجزلي."</p>
+            <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:13px;color:#2E9EF5;font-weight:700;">🏥 مركز تجميل متكامل — دبي</span>
+          </div>
+        
+          <div data-reveal="" style="background:#0D2235;border:1px solid rgba(255,255,255,0.08);border-radius:22px;padding:36px;position:relative;overflow:hidden;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 180ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 180ms;">
+            <span style="font-size:54px;font-weight:900;color:#2E9EF5;line-height:1;display:block;">72%</span>
+            <span style="display:block;font-size:14px;color:#7A9AB5;margin:4px 0 20px;">نسبة حضور — والسوق عند 40%</span>
+            <p style="font-size:15px;color:#EAF5FF;line-height:1.8;margin:0;">بينما معظم العيادات تعاني من إلغاء المواعيد والغياب المفاجئ، عملاؤنا يحققون معدل حضور يتجاوز 72% بفضل نظام المتابعة على واتساب.</p>
+            <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:13px;color:#2E9EF5;font-weight:700;">📊 متوسط جميع عملاء إحجزلي</span>
+          </div>
+        
+      </div>
+
+      <div data-reveal="" style="margin-top:72px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">
+        <div style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#7DC8FA;border:1px solid rgba(46,158,245,0.4);padding:5px 14px;border-radius:4px;margin-bottom:22px;">المقارنة</div>
+        <h2 style="font-size:clamp(30px,4.5vw,54px);font-weight:900;line-height:1.2;margin:0;">إحجزلي <span style="color:#2E9EF5;">مقابل</span> وكالة الإعلانات العادية</h2>
+      </div>
+
+      <div data-reveal="" style="overflow-x:auto;margin-top:36px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">
+      <div style="width:100%;min-width:640px;display:flex;flex-direction:column;">
+        <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;">
+          <div style="padding:var(--compareHeadPad);font-size:var(--compareFontSize);font-weight:800;text-align:right;background:rgba(46,158,245,0.1);color:#fff;border-bottom:2px solid rgba(46,158,245,0.22);border-radius:12px 0 0 0;">ماذا تحصل؟</div>
+          <div style="padding:var(--compareHeadPad);font-size:var(--compareFontSize);font-weight:800;text-align:right;background:rgba(46,158,245,0.1);color:#fff;border-bottom:2px solid rgba(46,158,245,0.22);">وكالة إعلانات عادية ❌</div>
+          <div style="padding:var(--compareHeadPad);font-size:var(--compareFontSize);font-weight:800;text-align:right;background:rgba(46,158,245,0.1);color:#fff;border-bottom:2px solid rgba(46,158,245,0.22);border-radius:0 12px 0 0;">إحجزلي ✅</div>
+        </div>
+        
+          <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;">
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#7A9AB5;border-bottom:1px solid rgba(255,255,255,0.06);">من يتصل على الليدز؟</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#E8453C;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:16px;margin-left:6px;">✗</span>إنت أو فريقك — وبعد ما يبردون</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#1DB954;font-size:16px;margin-left:6px;">✓</span>سنترنا — في أقل من 5 دقائق</div>
+          </div>
+        
+          <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;">
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#7A9AB5;border-bottom:1px solid rgba(255,255,255,0.06);">من يحجز الموعد؟</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#E8453C;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:16px;margin-left:6px;">✗</span>الريسبشن، إذا كان فاضياً</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#1DB954;font-size:16px;margin-left:6px;">✓</span>فريقنا يدخل الموعد في أجندتك مباشرة</div>
+          </div>
+        
+          <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;">
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#7A9AB5;border-bottom:1px solid rgba(255,255,255,0.06);">متابعة ما بعد الحجز؟</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#E8453C;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:16px;margin-left:6px;">✗</span>لا يوجد — تتمنى يحضر</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#1DB954;font-size:16px;margin-left:6px;">✓</span>سيناريو واتساب حتى يدخل الباب</div>
+          </div>
+        
+          <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;">
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#7A9AB5;border-bottom:1px solid rgba(255,255,255,0.06);">نسبة حضور المرضى</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#E8453C;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:16px;margin-left:6px;">✗</span>35–40% في أحسن الأحوال</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#1DB954;font-size:16px;margin-left:6px;">✓</span>+72% مثبتة عند عملائنا</div>
+          </div>
+        
+          <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;">
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#7A9AB5;border-bottom:1px solid rgba(255,255,255,0.06);">تخصص القطاع</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#E8453C;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:16px;margin-left:6px;">✗</span>يعملون مع الجميع — مطاعم، عقار، عيادات</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#1DB954;font-size:16px;margin-left:6px;">✓</span>عيادات أسنان وتجميل حصراً — نفهم مريضك</div>
+          </div>
+        
+          <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;">
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#7A9AB5;border-bottom:1px solid rgba(255,255,255,0.06);">ضمان النتائج</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#E8453C;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:16px;margin-left:6px;">✗</span>يضمنون "الجهد" فقط</div>
+            <div style="padding:var(--compareCellPad);font-size:var(--compareFontSize);color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#1DB954;font-size:16px;margin-left:6px;">✓</span>30 يوم مجاناً — مرضى أو لا تدفع</div>
+          </div>
+        
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(46,158,245,0.25),transparent);position:relative;z-index:2;"></div>
+
+  <!-- OFFER -->
+  <div id="offer" style="background:linear-gradient(160deg,#04111F 0%,#071828 50%,#091E30 100%);position:relative;overflow:hidden;padding:var(--sectionPad);z-index:2;">
+    <div style="position:absolute;top:-300px;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(46,158,245,0.12) 0%,transparent 60%);pointer-events:none;animation:floatBlobA 16s ease-in-out infinite;"></div>
+    <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+
+      <div data-reveal="" style="display:inline-block;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);color:#fff;font-size:12px;font-weight:900;padding:8px 24px;border-radius:100px;margin-bottom:32px;letter-spacing:1.5px;text-transform:uppercase;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">🎁 عرض خاص ومحدود</div>
+
+      <h2 data-reveal="" style="font-size:clamp(26px,4.5vw,52px);font-weight:900;line-height:1.3;text-align:center;margin:0 0 18px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">جرّبنا <span style="color:#2E9EF5;">30 يوماً بالكامل</span><br>بدون أي مخاطرة على الإطلاق</h2>
+      <p data-reveal="" style="font-size:18px;color:#7A9AB5;line-height:1.85;text-align:center;margin:0 auto;max-width:680px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">
+        نحن واثقون من نظامنا بما يكفي لأن نعمل شهراً كاملاً قبل أن تدفع ريالاً أو درهماً واحداً.<br>
+        إذا ما رأيت مرضى جدداً في حسابك — لا تدفع. ببساطة.
+      </p>
+
+      <div data-reveal="" style="background:rgba(255,255,255,0.035);border:1px solid rgba(46,158,245,0.25);border-radius:28px;padding:var(--offerBoxPad);margin:40px 0;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(24px,4vw,40px);font-weight:900;line-height:1.3;color:#fff;margin-bottom:16px;">ماذا تحصل في الـ <span style="color:#2E9EF5;">30 يوماً</span> المجانية؟</div>
+        <div style="font-size:18px;color:#7A9AB5;margin-bottom:36px;">كل شيء من اليوم الأول — بدون انتظار، بدون تأجيل.</div>
+
+        <ul style="list-style:none;text-align:right;display:inline-block;margin:0 0 40px;padding:0;">
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>حملات إعلانية احترافية مخصصة لعيادتك تنطلق خلال 72 ساعة
+            </li>
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>فريق مونتاج متخصص يجهّز ويعدّل فيديوهات إعلانك لأعلى نسبة تحويل
+            </li>
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>سنتر حجوزات متخصص يعمل 6 أيام في الأسبوع ويرد في دقائق
+            </li>
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>متابعة واتساب لكل مريض حتى يدخل عيادتك ويجلس في الكرسي
+            </li>
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>مواعيد تُدخل في أجندتك مباشرة — بدون أي تدخل منك
+            </li>
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>داشبورد شفاف يومي تشوف فيه كل ريال أو درهم صرفته ورجع كم
+            </li>
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>مدير حساب مخصص لعيادتك متاح طوال أوقات الدوام
+            </li>
+          
+            <li style="font-size:16px;color:#EAF5FF;padding:11px 0;display:flex;align-items:flex-start;gap:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:#1DB954;font-size:20px;flex-shrink:0;margin-top:2px;">✓</span>تقرير أداء أسبوعي تفصيلي بالأرقام الحقيقية
+            </li>
+          
+        </ul>
+        <br>
+        <a href="booking.html" style="display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5,#5BB8F8,#1A7ED4);background-size:250% auto;color:#fff;font-family:'Cairo',sans-serif;font-size:20px;font-weight:900;padding:22px 64px;border-radius:14px;text-decoration:none;animation:shimmerBtn 4s linear infinite,glowPulse 3s ease-in-out infinite;">🚀 ابدأ تجربتك المجانية الآن</a>
+
+        <p style="margin-top:22px;font-size:15px;color:#7A9AB5;line-height:1.8;">
+          الضمان الوحيد الذي نقدمه هو نتائج حقيقية — أو لا تدفع شيئاً.<br>
+          <span style="color:#F5C842;font-weight:700;">⚠️ العرض متاح لعيادة واحدة فقط في كل منطقة — لضمان عدم التعارض مع منافسيك.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(46,158,245,0.25),transparent);position:relative;z-index:2;"></div>
+
+  <!-- WHY -->
+  <section style="padding:var(--sectionPad);max-width:1100px;margin:0 auto;position:relative;z-index:2;">
+    <div data-reveal="" style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#7DC8FA;border:1px solid rgba(46,158,245,0.4);padding:5px 14px;border-radius:4px;margin-bottom:22px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">لماذا إحجزلي؟</div>
+    <h2 data-reveal="" style="font-size:clamp(30px,4.5vw,54px);font-weight:900;line-height:1.2;margin:0 0 18px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">ليس لأننا نقول ذلك —<br><span style="color:#2E9EF5;">بل لأن الأرقام تقوله</span></h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:24px;margin-top:52px;">
+      
+        <div data-reveal="" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:34px;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 0ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 0ms;">
+          <div style="width:54px;height:54px;border-radius:14px;background:rgba(46,158,245,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;">🎯</div>
+          <h3 style="font-size:19px;font-weight:800;color:#fff;margin:0 0 10px;">تخصص 100% في الصحة والتجميل</h3>
+          <p style="font-size:15px;color:#7A9AB5;line-height:1.8;margin:0;">لا نعمل مع مطاعم أو عقارات أو متاجر إلكترونية. فقط عيادات أسنان وتجميل. هذا يعني أننا نعرف مريضك أفضل منك.</p>
+        </div>
+      
+        <div data-reveal="" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:34px;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 70ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 70ms;">
+          <div style="width:54px;height:54px;border-radius:14px;background:rgba(46,158,245,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;">📞</div>
+          <h3 style="font-size:19px;font-weight:800;color:#fff;margin:0 0 10px;">نكمل رحلة المريض — ما نتركها في المنتصف</h3>
+          <p style="font-size:15px;color:#7A9AB5;line-height:1.8;margin:0;">وكالات الإعلانات توصل الليدز وتغيب. نحن نتولى كل خطوة: نعلن، نتصل، نحجز، نتابع، ونضمن الحضور.</p>
+        </div>
+      
+        <div data-reveal="" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:34px;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 140ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 140ms;">
+          <div style="width:54px;height:54px;border-radius:14px;background:rgba(46,158,245,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;">⚡</div>
+          <h3 style="font-size:19px;font-weight:800;color:#fff;margin:0 0 10px;">السرعة تصنع الفرق — ونعرف ذلك</h3>
+          <p style="font-size:15px;color:#7A9AB5;line-height:1.8;margin:0;">المريض الذي يملأ فورم الاهتمام يبحث عن أول من يرد عليه. متوسط ردّنا أقل من 5 دقائق.</p>
+        </div>
+      
+        <div data-reveal="" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:34px;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 210ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 210ms;">
+          <div style="width:54px;height:54px;border-radius:14px;background:rgba(46,158,245,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;">🔒</div>
+          <h3 style="font-size:19px;font-weight:800;color:#fff;margin:0 0 10px;">عيادتك وحدك في منطقتك</h3>
+          <p style="font-size:15px;color:#7A9AB5;line-height:1.8;margin:0;">لن نعمل مع عيادة منافسة لك في نفس المنطقة أثناء تعاملنا معك. عيادة واحدة لكل تخصص في كل منطقة.</p>
+        </div>
+      
+        <div data-reveal="" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:34px;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 280ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 280ms;">
+          <div style="width:54px;height:54px;border-radius:14px;background:rgba(46,158,245,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;">📊</div>
+          <h3 style="font-size:19px;font-weight:800;color:#fff;margin:0 0 10px;">شفافية مطلقة — ترى كل شيء</h3>
+          <p style="font-size:15px;color:#7A9AB5;line-height:1.8;margin:0;">ترى عدد الإعلانات، الاتصالات، الحجوزات، نسبة الحضور، وتكلفة اكتساب كل مريض. لا أرقام مزوّرة.</p>
+        </div>
+      
+        <div data-reveal="" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:34px;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(.2,.7,.2,1) 350ms,transform 0.6s cubic-bezier(.2,.7,.2,1) 350ms;">
+          <div style="width:54px;height:54px;border-radius:14px;background:rgba(46,158,245,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;">🚀</div>
+          <h3 style="font-size:19px;font-weight:800;color:#fff;margin:0 0 10px;">تشتغل في 72 ساعة — لا أسابيع</h3>
+          <p style="font-size:15px;color:#7A9AB5;line-height:1.8;margin:0;">نفهم عيادتك خلال ساعة، ونطلق النظام خلال 3 أيام. أول مرضى يبدأون يوصلون قبل نهاية الأسبوع الأول.</p>
+        </div>
+      
+    </div>
+  </section>
+
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(46,158,245,0.25),transparent);position:relative;z-index:2;"></div>
+
+  <!-- FAQ -->
+  <div id="faq" style="background:#071828;padding:var(--sectionPad);position:relative;z-index:2;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div data-reveal="" style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#7DC8FA;border:1px solid rgba(46,158,245,0.4);padding:5px 14px;border-radius:4px;margin-bottom:22px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">أسئلة شائعة</div>
+      <h2 data-reveal="" style="font-size:clamp(30px,4.5vw,54px);font-weight:900;line-height:1.2;margin:0 0 18px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">كل سؤال في بالك —<br><span style="color:#2E9EF5;">نجاوب عليه بصدق</span></h2>
+
+      <div style="margin-top:40px;display:flex;flex-direction:column;gap:12px;max-width:820px;">
+        
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <div data-faq="0" onclick="toggleFaq(0)" style="padding:22px 28px;font-size:17px;font-weight:800;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;">
+              وش الفرق بينكم وبين وكالة الإعلانات العادية؟
+              <span style="color:#2E9EF5;font-size:22px;flex-shrink:0;transition:transform 0.3s ease;transform:rotate(45deg);">+</span>
+            </div>
+            <div style="padding:0 28px;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:15px;color:#7A9AB5;line-height:1.9;max-height:500px;padding-bottom:24px;">وكالة الإعلانات تأخذ فلوسك، تنشئ إعلانات، توصّل ليدز، وتروح. نحن مختلفون جذرياً: نعلن، نتصل في دقائق، نحجز الموعد في أجندتك، ونتابع المريض واتساب حتى يدخل عيادتك.</div>
+          </div>
+        
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <div data-faq="1" onclick="toggleFaq(1)" style="padding:22px 28px;font-size:17px;font-weight:800;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;">
+              كيف تعملون بدون عقد؟ ما هو الالتزام من جهتنا؟
+              <span style="color:#2E9EF5;font-size:22px;flex-shrink:0;transition:transform 0.3s ease;transform:rotate(0deg);">+</span>
+            </div>
+            <div style="padding:0 28px;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:15px;color:#7A9AB5;line-height:1.9;max-height:0px;padding-bottom:0px;">نحن واثقون من نتائجنا لدرجة أننا لا نحتاج لعقد يجبرك على البقاء. تجرّب 30 يوماً بالكامل — ثم نكمل معاً باتفاق شهري قابل للإلغاء في أي وقت.</div>
+          </div>
+        
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <div data-faq="2" onclick="toggleFaq(2)" style="padding:22px 28px;font-size:17px;font-weight:800;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;">
+              كم يستغرق حتى نرى أول نتائج؟
+              <span style="color:#2E9EF5;font-size:22px;flex-shrink:0;transition:transform 0.3s ease;transform:rotate(0deg);">+</span>
+            </div>
+            <div style="padding:0 28px;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:15px;color:#7A9AB5;line-height:1.9;max-height:0px;padding-bottom:0px;">معظم عيادتنا ترى أولى المواعيد المحجوزة خلال أول 5 إلى 10 أيام من إطلاق النظام. نهاية الشهر الأول تكون لديك صورة كاملة عن الإيرادات الإضافية.</div>
+          </div>
+        
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <div data-faq="3" onclick="toggleFaq(3)" style="padding:22px 28px;font-size:17px;font-weight:800;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;">
+              هل يحتاج فريق عيادتي يعمل شيء إضافي؟
+              <span style="color:#2E9EF5;font-size:22px;flex-shrink:0;transition:transform 0.3s ease;transform:rotate(0deg);">+</span>
+            </div>
+            <div style="padding:0 28px;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:15px;color:#7A9AB5;line-height:1.9;max-height:0px;padding-bottom:0px;">بالحد الأدنى. كل ما نحتاجه: ساعة واحدة في البداية لنفهم خدماتك، والوصول لنظام حجوزاتك لندخل المواعيد مباشرة. باقي العمل علينا.</div>
+          </div>
+        
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <div data-faq="4" onclick="toggleFaq(4)" style="padding:22px 28px;font-size:17px;font-weight:800;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;">
+              هل تعملون مع أكثر من عيادة في نفس المنطقة؟
+              <span style="color:#2E9EF5;font-size:22px;flex-shrink:0;transition:transform 0.3s ease;transform:rotate(0deg);">+</span>
+            </div>
+            <div style="padding:0 28px;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:15px;color:#7A9AB5;line-height:1.9;max-height:0px;padding-bottom:0px;">لا. عيادة واحدة لكل تخصص في كل منطقة. إذا كنت عيادة أسنان في حي معين، لن نعمل مع منافس لك في نفس الحي.</div>
+          </div>
+        
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <div data-faq="5" onclick="toggleFaq(5)" style="padding:22px 28px;font-size:17px;font-weight:800;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;">
+              ما التخصصات التي تعملون معها؟
+              <span style="color:#2E9EF5;font-size:22px;flex-shrink:0;transition:transform 0.3s ease;transform:rotate(0deg);">+</span>
+            </div>
+            <div style="padding:0 28px;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:15px;color:#7A9AB5;line-height:1.9;max-height:0px;padding-bottom:0px;">نعمل حصراً مع عيادات الأسنان والتجميل: زراعة أسنان، فينير، تقويم، تبييض، بوتوكس، فيلر، تقشير، جلسات ليزر، وجميع خدمات طب الأسنان والتجميل الطبي.</div>
+          </div>
+        
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <div data-faq="6" onclick="toggleFaq(6)" style="padding:22px 28px;font-size:17px;font-weight:800;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;">
+              جربنا وكالات قبل وخسرنا — كيف تختلفون؟
+              <span style="color:#2E9EF5;font-size:22px;flex-shrink:0;transition:transform 0.3s ease;transform:rotate(0deg);">+</span>
+            </div>
+            <div style="padding:0 28px;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:15px;color:#7A9AB5;line-height:1.9;max-height:0px;padding-bottom:0px;">نسمع هذا كثيراً. معظم الوكالات تبيعك إعلانات وتترك باقي القصة عليك. نحن نتولى المسيرة كاملة، ونعطيك 30 يوماً مجاناً لترى الفرق بنفسك بدون أي مخاطرة مالية.</div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div style="background:#071828;text-align:center;padding:var(--sectionPad);position:relative;z-index:2;">
+    <div style="max-width:820px;margin:0 auto;">
+      <div data-reveal="" style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#7DC8FA;border:1px solid rgba(46,158,245,0.4);padding:5px 14px;border-radius:4px;margin-bottom:28px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">الخطوة التالية</div>
+      <h2 data-reveal="" style="font-size:clamp(32px,5vw,58px);font-weight:900;line-height:1.2;margin:0 0 20px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">كل يوم يمر بدون نظام<br>هو يوم <span style="color:#2E9EF5;">يملأه منافسك.</span></h2>
+      <p data-reveal="" style="font-size:18px;color:#7A9AB5;line-height:1.85;margin:0 auto 40px;max-width:620px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">
+        المرضى في منطقتك يبحثون الآن عن عيادة — والسؤال الوحيد:<br>
+        هل سيجدونك أنت، أم سيجدون منافسك أولاً؟<br><br>
+        <strong style="color:#fff;">30 يوماً مجانية. مرضى حقيقيون. لا عقود. لا مخاطرة.</strong><br>
+        الوحيد الذي يخسر هو من ينتظر.
+      </p>
+      <div data-reveal="" style="display:flex;flex-direction:column;align-items:center;gap:14px;opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.2,.7,.2,1),transform 0.7s cubic-bezier(.2,.7,.2,1);">
+        <a href="booking.html" style="display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5,#5BB8F8,#1A7ED4);background-size:250% auto;color:#fff;font-family:'Cairo',sans-serif;font-size:21px;font-weight:900;padding:22px 68px;border-radius:14px;text-decoration:none;animation:shimmerBtn 4s linear infinite,glowPulse 3s ease-in-out infinite;">📲 ابدأ تجربتك المجانية الآن</a>
+        <span style="font-size:13px;color:#7A9AB5;font-weight:600;">⚠️ <span style="color:#F5C842;">مكان واحد متاح في كل منطقة — لا تدع منافسك يسبقك</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer style="background:#04111F;border-top:1px solid rgba(255,255,255,0.07);padding:48px 24px;text-align:center;font-size:14px;color:#7A9AB5;position:relative;z-index:2;">
+    <p style="color:#fff;font-size:18px;font-weight:800;margin:0 0 8px;">إحجزلي</p>
+    <p style="margin:0;">نظام المرضى المتكامل لعيادات الأسنان والتجميل — السعودية والإمارات</p>
+    <p style="margin-top:16px;font-size:13px;">© 2026 إحجزلي — جميع الحقوق محفوظة</p>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var openFaq = 0;
+  window.toggleFaq = function(i){
+    openFaq = (openFaq === i) ? -1 : i;
+    document.querySelectorAll('[data-faq]').forEach(function(h){
+      var idx = parseInt(h.getAttribute('data-faq'), 10);
+      var plus = h.querySelector('span');
+      var ans = h.nextElementSibling;
+      var open = idx === openFaq;
+      if (plus) plus.style.transform = open ? 'rotate(45deg)' : 'rotate(0deg)';
+      if (ans) { ans.style.maxHeight = open ? '500px' : '0px'; ans.style.paddingBottom = open ? '24px' : '0px'; }
+    });
+  };
+
+  function animateCount(el){
+    var raw = el.textContent.trim();
+    var match = raw.match(/^([^\d]*)([\d,.]+)(.*)$/);
+    if (!match) return;
+    var prefix = match[1], numStr = match[2], suffix = match[3];
+    var hasComma = numStr.indexOf(',') !== -1;
+    var target = parseFloat(numStr.replace(/,/g, ''));
+    if (isNaN(target)) return;
+    var duration = 1100;
+    var start = performance.now();
+    var decimals = (numStr.split('.')[1] || '').length;
+    function frame(now){
+      var progress = Math.min((now - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = target * eased;
+      var display = decimals ? current.toFixed(decimals) : Math.round(current).toString();
+      if (hasComma) display = Number(display).toLocaleString('en-US');
+      el.textContent = prefix + display + suffix;
+      if (progress < 1) requestAnimationFrame(frame);
+      else el.textContent = raw;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var els = document.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.style.opacity = '1'; el.style.transform = 'translateY(0) scale(1)'; });
+      return;
+    }
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0) scale(1)';
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function(el){ obs.observe(el); });
+
+    var statEls = document.querySelectorAll('[data-stat]');
+    var statObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          var numEl = e.target.querySelector('[data-stat-n]');
+          if (numEl) animateCount(numEl);
+          statObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    statEls.forEach(function(el){ statObs.observe(el); });
+
+    var progress = document.querySelector('[data-role="progress"]');
+    var sticky = document.querySelector('[data-role="sticky"]');
+    function onScroll(){
+      var h = document.documentElement;
+      var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+      if (progress) progress.style.width = scrolled + '%';
+      if (sticky) sticky.style.transform = window.scrollY > 700 ? 'translateY(0)' : 'translateY(100%)';
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  });
+})();
+</script>
+</body>
+</html>

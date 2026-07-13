@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>إحجزلي — احجز استشارتك المجانية</title>
+<link rel="icon" type="image/png" href="assets/ehjezli-logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/cairo-arabic.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/cairo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+html,body{margin:0;padding:0;background:#04111F;}
+*{box-sizing:border-box;}
+@keyframes stepIn{from{opacity:0;transform:translateX(-18px);}to{opacity:1;transform:translateX(0);}}
+@keyframes confirmPop{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.5);}}
+@keyframes floatBlobA{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(40px,-30px) scale(1.12);}}
+@keyframes floatBlobB{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,30px) scale(1.15);}}
+@keyframes shimmerBtn{0%{background-position:0% 50%;}100%{background-position:200% 50%;}}
+@keyframes glowPulse{0%,100%{box-shadow:0 6px 32px rgba(46,158,245,0.3);}50%{box-shadow:0 10px 46px rgba(46,158,245,0.55);}}
+@keyframes spinSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+</style>
+<style>
+:root{
+  --pageGridCols:1fr 520px; --sideProofPad:64px 56px;
+  --sideProofBorder:1px solid rgba(46,158,245,0.18);
+  --formSidePad:64px 48px; --fieldRowCols:1fr 1fr;
+}
+@media (max-width:899px){
+  :root{
+    --pageGridCols:1fr; --sideProofPad:36px 22px;
+    --sideProofBorder:none; --formSidePad:36px 22px; --fieldRowCols:1fr;
+  }
+}
+</style>
+
+</head>
+<body>
+<div dir="rtl" style="direction:rtl;font-family:'Cairo',sans-serif;background:#04111F;color:#fff;min-height:100vh;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden;">
+
+  <!-- ambient glow blobs -->
+  <div style="position:fixed;top:-220px;right:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(46,158,245,0.16),transparent 70%);filter:blur(30px);z-index:0;animation:floatBlobA 16s ease-in-out infinite;pointer-events:none;"></div>
+  <div style="position:fixed;bottom:-260px;left:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(26,126,212,0.14),transparent 70%);filter:blur(30px);z-index:0;animation:floatBlobB 19s ease-in-out infinite;pointer-events:none;"></div>
+
+  <!-- TOP PROGRESS BAR -->
+  <div style="position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(4,17,31,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(46,158,245,0.18);padding:12px 16px;display:flex;align-items:center;gap:12px;">
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;text-decoration:none;color:#fff;white-space:nowrap;">
+      <img src="assets/ehjezli-logo.png" alt="إحجزلي" style="width:28px;height:28px;border-radius:8px;">
+      إحجزلي
+    </a>
+    <div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;">
+      <div style="height:100%;border-radius:10px;background:linear-gradient(90deg,#1A7ED4,#2E9EF5);transition:width 0.5s cubic-bezier(.4,0,.2,1);box-shadow:0 0 10px rgba(46,158,245,0.5);width:16.6667%;" data-progress></div>
+    </div>
+    <div style="font-size:12px;font-weight:700;color:#7A9AB5;white-space:nowrap;" data-progress-label>الخطوة 1 من 6</div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div data-view="form">
+  <div style="min-height:100vh;display:grid;grid-template-columns:var(--pageGridCols);padding-top:70px;position:relative;z-index:1;">
+
+    <!-- LEFT: SOCIAL PROOF -->
+    <div style="background:#071828;padding:var(--sideProofPad);border-left:var(--sideProofBorder);display:flex;flex-direction:column;justify-content:center;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2E9EF5;margin-bottom:28px;">
+        <span style="width:20px;height:1px;background:#2E9EF5;"></span>لماذا إحجزلي
+      </div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);font-weight:900;line-height:1.2;margin:0 0 12px;">جرّب <span style="color:#2E9EF5;">30 يوماً مجاناً</span> —<br>مرضى حقيقيون أو لا تدفع شيئاً</h2>
+      <p style="font-size:16px;color:#7A9AB5;line-height:1.8;margin:0 0 40px;font-weight:500;">
+        بمجرد إرسال معلوماتك، <strong style="color:#fff;">ستحجز مكالمة معنا</strong>
+        نشرح لك فيها خدماتنا بالتفصيل وكيف نعمل معاً —
+        <strong style="color:#fff;">وتبدأ تجربتك المجانية لمدة 30 يوماً</strong> مع نظامنا بالكامل.
+      </p>
+
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px;">
+        <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(46,158,245,0.18);border-radius:14px;padding:16px 18px;">
+          <div style="font-size:26px;font-weight:900;color:#2E9EF5;line-height:1;flex-shrink:0;">3.2×</div>
+          <div style="font-size:13px;color:#7A9AB5;line-height:1.6;"><strong style="color:#fff;display:block;font-size:14px;">مضاعفة الإيرادات في 60 يوماً</strong></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(46,158,245,0.18);border-radius:14px;padding:16px 18px;">
+          <div style="font-size:26px;font-weight:900;color:#2E9EF5;line-height:1;flex-shrink:0;">72%</div>
+          <div style="font-size:13px;color:#7A9AB5;line-height:1.6;"><strong style="color:#fff;display:block;font-size:14px;">نسبة حضور المرضى</strong></div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div style="padding:var(--formSidePad);display:flex;flex-direction:column;justify-content:center;">
+
+      <div style="background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.25);border-right:3px solid #F5C842;border-radius:10px;padding:14px 18px;margin-bottom:32px;font-size:13px;color:#F5C842;font-weight:700;line-height:1.6;">
+        ⚠️ <strong>تنبيه مهم:</strong>
+        <span style="color:rgba(245,200,66,0.7);font-weight:500;">هذا النظام مخصص فقط لعيادات الأسنان والتجميل الجادة في تحقيق نمو حقيقي في السعودية والإمارات. إذا كنت تبحث عن "تجربة سريعة" بلا التزام — هذا مو لك.</span>
+      </div>
+
+      <!-- STEP 1 -->
+      <div data-step="1" style="">
+      <div style="animation:stepIn 0.35s cubic-bezier(.4,0,.2,1) both;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2E9EF5;margin-bottom:16px;">الخطوة 1 من 6</div>
+        <h3 style="font-size:clamp(22px,3vw,30px);font-weight:900;line-height:1.25;margin:0 0 8px;">ما نوع عيادتك أو مركزك؟</h3>
+        <p style="font-size:14px;color:#7A9AB5;margin:0 0 28px;line-height:1.7;">يمكنك اختيار أكثر من إجابة</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+            <div data-choice="clinicType" data-value="🦷 عيادة أسنان متخصصة" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🦷</span>عيادة أسنان متخصصة
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="clinicType" data-value="💉 مركز تجميل وبوتوكس" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">💉</span>مركز تجميل وبوتوكس
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="clinicType" data-value="🌸 مركز عناية بالبشرة والليزر" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🌸</span>مركز عناية بالبشرة والليزر
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="clinicType" data-value="🏥 عيادة متعددة التخصصات" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🏥</span>عيادة متعددة التخصصات
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+        </div>
+        <button data-next="2" disabled style="width:100%;margin-top:24px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);color:#fff;font-family:'Cairo',sans-serif;font-size:17px;font-weight:900;padding:18px 24px;border-radius:12px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 6px 32px rgba(46,158,245,0.3);opacity:0.5;">التالي ←</button>
+      </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div data-step="2" style="display:none;">
+      <div style="animation:stepIn 0.35s cubic-bezier(.4,0,.2,1) both;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2E9EF5;margin-bottom:16px;">الخطوة 2 من 6</div>
+        <h3 style="font-size:clamp(22px,3vw,30px);font-weight:900;line-height:1.25;margin:0 0 8px;">ما الخدمة التي تريد زيادة حجوزاتها أكثر؟</h3>
+        <p style="font-size:14px;color:#7A9AB5;margin:0 0 28px;line-height:1.7;">يمكنك اختيار أكثر من إجابة</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+            <div data-choice="mainService" data-value="🔩 زراعة الأسنان" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🔩</span>زراعة الأسنان
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="mainService" data-value="✨ القشور والابتسامة الهوليوودية" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">✨</span>القشور والابتسامة الهوليوودية
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="mainService" data-value="💉 البوتوكس والفيلر" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">💉</span>البوتوكس والفيلر
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="mainService" data-value="🎨 التبييض والتقويم" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🎨</span>التبييض والتقويم
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="mainService" data-value="🌿 جلسات البشرة والتقشير" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🌿</span>جلسات البشرة والتقشير
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+        </div>
+        <button data-next="3" disabled style="width:100%;margin-top:24px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);color:#fff;font-family:'Cairo',sans-serif;font-size:17px;font-weight:900;padding:18px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 6px 32px rgba(46,158,245,0.3);opacity:0.5;">التالي ←</button>
+        <button data-back="1" style="width:100%;margin-top:10px;background:none;border:1px solid rgba(46,158,245,0.18);color:#7A9AB5;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;padding:12px;border-radius:10px;cursor:pointer;">← رجوع</button>
+      </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div data-step="3" style="display:none;">
+      <div style="animation:stepIn 0.35s cubic-bezier(.4,0,.2,1) both;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2E9EF5;margin-bottom:16px;">الخطوة 3 من 6</div>
+        <h3 style="font-size:clamp(22px,3vw,30px);font-weight:900;line-height:1.25;margin:0 0 8px;">كم موعداً تحجز لهذه الخدمة حالياً في الشهر؟</h3>
+        <p style="font-size:14px;color:#7A9AB5;margin:0 0 28px;line-height:1.7;">كن صريحاً — هذا يساعدنا نقيس حجم الفرصة الحقيقية لعيادتك</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+            <div data-choice="currentBookings" data-value="😔 أقل من 10 مواعيد" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">😔</span>أقل من 10 مواعيد
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="currentBookings" data-value="🙂 10 إلى 30 موعداً" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🙂</span>10 إلى 30 موعداً
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="currentBookings" data-value="😊 30 إلى 60 موعداً" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">😊</span>30 إلى 60 موعداً
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="currentBookings" data-value="🚀 أكثر من 60 موعداً" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🚀</span>أكثر من 60 موعداً
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+        </div>
+        <button data-next="4" disabled style="width:100%;margin-top:24px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);color:#fff;font-family:'Cairo',sans-serif;font-size:17px;font-weight:900;padding:18px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 6px 32px rgba(46,158,245,0.3);opacity:0.5;">التالي ←</button>
+        <button data-back="2" style="width:100%;margin-top:10px;background:none;border:1px solid rgba(46,158,245,0.18);color:#7A9AB5;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;padding:12px;border-radius:10px;cursor:pointer;">← رجوع</button>
+      </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div data-step="4" style="display:none;">
+      <div style="animation:stepIn 0.35s cubic-bezier(.4,0,.2,1) both;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2E9EF5;margin-bottom:16px;">الخطوة 4 من 6</div>
+        <h3 style="font-size:clamp(22px,3vw,30px);font-weight:900;line-height:1.25;margin:0 0 8px;">ما أكبر تحدٍّ تواجهه حالياً في جذب مرضى جدد؟</h3>
+        <p style="font-size:14px;color:#7A9AB5;margin:0 0 28px;line-height:1.7;">يمكنك اختيار أكثر من إجابة</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+            <div data-choice="bigChallenge" data-value="📵 ما أحد يرد على الليدز بسرعة" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">📵</span>ما أحد يرد على الليدز بسرعة
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="bigChallenge" data-value="💸 أصرف على الإعلانات بدون نتيجة" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">💸</span>أصرف على الإعلانات بدون نتيجة
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="bigChallenge" data-value="🪑 مرضى يحجزون ولا يحضرون" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🪑</span>مرضى يحجزون ولا يحضرون
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="bigChallenge" data-value="📊 لا يوجد نظام واضح — كل شيء عشوائي" data-multi style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">📊</span>لا يوجد نظام واضح — كل شيء عشوائي
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:5px;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+        </div>
+        <button data-next="5" disabled style="width:100%;margin-top:24px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);color:#fff;font-family:'Cairo',sans-serif;font-size:17px;font-weight:900;padding:18px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 6px 32px rgba(46,158,245,0.3);opacity:0.5;">التالي ←</button>
+        <button data-back="3" style="width:100%;margin-top:10px;background:none;border:1px solid rgba(46,158,245,0.18);color:#7A9AB5;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;padding:12px;border-radius:10px;cursor:pointer;">← رجوع</button>
+      </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div data-step="5" style="display:none;">
+      <div style="animation:stepIn 0.35s cubic-bezier(.4,0,.2,1) both;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2E9EF5;margin-bottom:16px;">الخطوة 5 من 6</div>
+        <h3 style="font-size:clamp(22px,3vw,30px);font-weight:900;line-height:1.25;margin:0 0 8px;">كم ميزانيتك الشهرية للإعلانات الآن؟</h3>
+        <p style="font-size:14px;color:#7A9AB5;margin:0 0 28px;line-height:1.7;">هذا يساعدنا نحدد هل نقدر نحقق لك العائد المناسب (ريال أو درهم)</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          
+            <div data-choice="adBudget" data-value="🌱 لا أصرف على الإعلانات حالياً" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🌱</span>لا أصرف على الإعلانات حالياً
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="adBudget" data-value="📈 أقل من 3,000 شهرياً" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">📈</span>أقل من 3,000 شهرياً
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="adBudget" data-value="💰 3,000 إلى 10,000" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">💰</span>3,000 إلى 10,000
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+            <div data-choice="adBudget" data-value="🏆 أكثر من 10,000 شهرياً" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 20px;cursor:pointer;font-size:15px;font-weight:600;color:#fff;transition:all 0.2s ease;">
+              <span style="font-size:20px;flex-shrink:0;">🏆</span>أكثر من 10,000 شهرياً
+              <div style="margin-right:auto;width:20px;height:20px;border-radius:50%;background:transparent;border:1.5px solid rgba(46,158,245,0.18);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;" data-check></div>
+            </div>
+          
+        </div>
+        <button data-next="6" disabled style="width:100%;margin-top:24px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5);color:#fff;font-family:'Cairo',sans-serif;font-size:17px;font-weight:900;padding:18px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 6px 32px rgba(46,158,245,0.3);opacity:0.5;">التالي ←</button>
+        <button data-back="4" style="width:100%;margin-top:10px;background:none;border:1px solid rgba(46,158,245,0.18);color:#7A9AB5;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;padding:12px;border-radius:10px;cursor:pointer;">← رجوع</button>
+      </div>
+      </div>
+
+      <!-- STEP 6 -->
+      <div data-step="6" style="display:none;">
+      <div style="animation:stepIn 0.35s cubic-bezier(.4,0,.2,1) both;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2E9EF5;margin-bottom:16px;">الخطوة 6 من 6 — الأهم</div>
+        <h3 style="font-size:clamp(22px,3vw,30px);font-weight:900;line-height:1.25;margin:0 0 8px;">أين نرسل لك تحليل عيادتك؟</h3>
+        <p style="font-size:14px;color:#7A9AB5;margin:0 0 28px;line-height:1.7;">بعد التعبئة، ستفتح لك صفحة لحجز موعد استشارتك مباشرة على تقويمنا</p>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:grid;grid-template-columns:var(--fieldRowCols);gap:12px;">
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:13px;font-weight:700;color:#7A9AB5;">الاسم الكريم</label>
+              <input type="text" data-field="nameField" placeholder="د. محمد العمري" style="background:rgba(255,255,255,0.04);border:1.5px solid rgba(46,158,245,0.18);border-radius:10px;padding:14px 16px;font-size:15px;font-weight:600;color:#fff;font-family:'Cairo',sans-serif;width:100%;direction:rtl;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:13px;font-weight:700;color:#7A9AB5;">اسم العيادة</label>
+              <input type="text" data-field="clinicField" placeholder="عيادة النور للأسنان" style="background:rgba(255,255,255,0.04);border:1.5px solid rgba(46,158,245,0.18);border-radius:10px;padding:14px 16px;font-size:15px;font-weight:600;color:#fff;font-family:'Cairo',sans-serif;width:100%;direction:rtl;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:13px;font-weight:700;color:#7A9AB5;">رقم الجوال</label>
+            <input type="tel" data-field="phoneField" placeholder="05XXXXXXXX" style="background:rgba(255,255,255,0.04);border:1.5px solid rgba(46,158,245,0.18);border-radius:10px;padding:14px 16px;font-size:15px;font-weight:600;color:#fff;font-family:'Cairo',sans-serif;width:100%;direction:rtl;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <label style="font-size:13px;font-weight:700;color:#7A9AB5;">الدولة والمدينة</label>
+            <div style="font-size:12px;font-weight:700;color:#7DC8FA;">🇸🇦 السعودية</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              
+                <div data-choice="cityField" data-value="الرياض" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">الرياض</div>
+              
+                <div data-choice="cityField" data-value="جدة" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">جدة</div>
+              
+                <div data-choice="cityField" data-value="الدمام" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">الدمام</div>
+              
+                <div data-choice="cityField" data-value="مكة المكرمة" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">مكة المكرمة</div>
+              
+                <div data-choice="cityField" data-value="المدينة المنورة" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">المدينة المنورة</div>
+              
+                <div data-choice="cityField" data-value="الخبر" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">الخبر</div>
+              
+                <div data-choice="cityField" data-value="أخرى — السعودية" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">أخرى — السعودية</div>
+              
+            </div>
+            <div style="font-size:12px;font-weight:700;color:#7DC8FA;margin-top:4px;">🇦🇪 الإمارات</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              
+                <div data-choice="cityField" data-value="دبي" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">دبي</div>
+              
+                <div data-choice="cityField" data-value="أبوظبي" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">أبوظبي</div>
+              
+                <div data-choice="cityField" data-value="الشارقة" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">الشارقة</div>
+              
+                <div data-choice="cityField" data-value="عجمان" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">عجمان</div>
+              
+                <div data-choice="cityField" data-value="أخرى — الإمارات" style="background:rgba(255,255,255,0.025);border:1.5px solid rgba(46,158,245,0.18);border-radius:9px;padding:9px 16px;cursor:pointer;font-size:13.5px;font-weight:600;color:#fff;">أخرى — الإمارات</div>
+              
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:13px;font-weight:700;color:#7A9AB5;">أي شيء تريد إضافته؟ <span style="color:#7A9AB5;font-weight:500;">(اختياري)</span></label>
+            <textarea data-field="extraField" placeholder="مثال: لدي عيادة ثانية، أو أريد التركيز على زراعة الأسنان فقط..." style="resize:none;min-height:80px;background:rgba(255,255,255,0.04);border:1.5px solid rgba(46,158,245,0.18);border-radius:10px;padding:14px 16px;font-size:15px;font-weight:600;color:#fff;font-family:'Cairo',sans-serif;width:100%;direction:rtl;"></textarea>
+          </div>
+        </div>
+        <button data-submit disabled style="width:100%;margin-top:24px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5,#5BB8F8,#1A7ED4);background-size:250% auto;color:#fff;font-family:'Cairo',sans-serif;font-size:17px;font-weight:900;padding:18px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 6px 32px rgba(46,158,245,0.3);opacity:0.5;animation:none;">🚀 احجز استشارتي المجانية الآن</button>
+        <button data-back="5" style="width:100%;margin-top:10px;background:none;border:1px solid rgba(46,158,245,0.18);color:#7A9AB5;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;padding:12px;border-radius:10px;cursor:pointer;">← رجوع</button>
+        <p style="font-size:11px;color:#7A9AB5;margin-top:14px;text-align:center;line-height:1.6;">🔒 معلوماتك محمية ولن تُشارك مع أي طرف. بالضغط على الزر أعلاه أنت توافق على أن نتواصل معك.</p>
+      </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- CONFIRMATION -->
+  <div data-view="confirm" style="display:none;">
+  <div style="text-align:center;padding:150px 24px 80px;position:relative;z-index:1;max-width:560px;margin:0 auto;">
+    <div style="width:84px;height:84px;border-radius:50%;background:rgba(29,185,84,0.12);border:2px solid #1DB954;display:flex;align-items:center;justify-content:center;font-size:38px;margin:0 auto 28px;animation:confirmPop 0.6s cubic-bezier(.3,1.5,.4,1) both;">✓</div>
+    <h2 style="font-size:clamp(26px,4vw,38px);font-weight:900;line-height:1.25;margin:0 0 14px;">وصل طلبك! <span style="color:#1DB954;">خطوة أخيرة</span></h2>
+    <p style="font-size:16px;color:#7A9AB5;line-height:1.8;max-width:420px;margin:0 auto 36px;">
+      اضغط الزر أدناه لتختار الوقت المناسب لك مباشرة على تقويمنا —
+      استشارتك المجانية تُحجز في دقيقة واحدة.
+    </p>
+
+    <div style="display:flex;flex-direction:column;gap:12px;text-align:right;max-width:420px;margin:0 auto 36px;">
+      <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 18px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(46,158,245,0.15);border:1px solid rgba(46,158,245,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#2E9EF5;flex-shrink:0;">١</div>
+        <p style="font-size:14px;color:#7A9AB5;line-height:1.65;margin:0;"><strong style="color:#fff;display:block;margin-bottom:2px;">اختر وقتك على التقويم</strong>افتح تقويمنا واختر الموعد الذي يناسبك خلال الأيام القادمة</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 18px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(46,158,245,0.15);border:1px solid rgba(46,158,245,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#2E9EF5;flex-shrink:0;">٢</div>
+        <p style="font-size:14px;color:#7A9AB5;line-height:1.65;margin:0;"><strong style="color:#fff;display:block;margin-bottom:2px;">مكالمة تشخيصية</strong>نراجع إجاباتك مسبقاً، فتكون المكالمة مركّزة ومباشرة على فرصتك الحقيقية</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(46,158,245,0.18);border-radius:12px;padding:16px 18px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(46,158,245,0.15);border:1px solid rgba(46,158,245,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#2E9EF5;flex-shrink:0;">٣</div>
+        <p style="font-size:14px;color:#7A9AB5;line-height:1.65;margin:0;"><strong style="color:#fff;display:block;margin-bottom:2px;">خطة نمو مخصصة</strong>تحصل على خطة واضحة تحدد كم مريضاً إضافياً تستطيع تحقيقه — مجاناً</p>
+      </div>
+    </div>
+
+    <a href="https://calendar.google.com/calendar/appointments/schedules/PLACEHOLDER" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1A7ED4,#2E9EF5,#5BB8F8,#1A7ED4);background-size:250% auto;color:#fff;font-family:'Cairo',sans-serif;font-size:17px;font-weight:900;padding:18px 44px;border-radius:12px;text-decoration:none;animation:shimmerBtn 4s linear infinite, glowPulse 3s ease-in-out infinite;">📅 احجز مكالمتك الآن</a>
+    <p style="margin-top:16px;font-size:13px;color:#7A9AB5;font-weight:700;">سيفتح تقويم Google Calendar لاختيار وقتك بنفسك</p>
+  </div>
+  </div>
+
+</div>
+<script>
+(function(){
+  var SEL = { bg:'rgba(46,158,245,0.12)', border:'#2E9EF5', checkBg:'#2E9EF5', mark:'\u2713' };
+  var UNSEL = { bg:'rgba(255,255,255,0.025)', border:'rgba(46,158,245,0.18)', checkBg:'transparent', mark:'' };
+
+  var state = {
+    step: 1,
+    clinicType: [], mainService: [], bigChallenge: [],
+    currentBookings: '', adBudget: '', cityField: '',
+    nameField: '', clinicField: '', phoneField: '', extraField: '',
+    submitted: false
+  };
+  var GUARDS = {2:'clinicType', 3:'mainService', 4:'currentBookings', 5:'bigChallenge', 6:'adBudget'};
+
+  function paintGroup(group){
+    document.querySelectorAll('[data-choice="'+group+'"]').forEach(function(el){
+      var v = el.getAttribute('data-value');
+      var selected = Array.isArray(state[group]) ? state[group].indexOf(v) !== -1 : state[group] === v;
+      var s = selected ? SEL : UNSEL;
+      el.style.background = s.bg;
+      el.style.borderColor = s.border;
+      var check = el.querySelector('[data-check]');
+      if (check){ check.style.background = s.checkBg; check.style.borderColor = s.border; check.textContent = s.mark; }
+    });
+  }
+
+  function paintButtons(){
+    document.querySelectorAll('[data-next]').forEach(function(btn){
+      var n = btn.getAttribute('data-next');
+      var g = GUARDS[n];
+      var ok = Array.isArray(state[g]) ? state[g].length > 0 : !!state[g];
+      btn.disabled = !ok;
+      btn.style.opacity = ok ? 1 : 0.5;
+    });
+    var submitBtn = document.querySelector('[data-submit]');
+    if (submitBtn){
+      var ok = step6Valid();
+      submitBtn.disabled = !ok;
+      submitBtn.style.opacity = ok ? 1 : 0.5;
+      submitBtn.style.animation = ok ? 'shimmerBtn 4s linear infinite, glowPulse 3s ease-in-out infinite' : 'none';
+    }
+  }
+
+  function step6Valid(){
+    return state.nameField.trim().length > 1 &&
+           state.clinicField.trim().length > 1 &&
+           state.phoneField.trim().length >= 9 &&
+           !!state.cityField;
+  }
+
+  function paintProgress(){
+    var pct = (state.submitted ? 6 : state.step) / 6 * 100;
+    var bar = document.querySelector('[data-progress]');
+    var label = document.querySelector('[data-progress-label]');
+    if (bar) bar.style.width = pct + '%';
+    if (label) label.textContent = state.submitted ? '\uD83C\uDF89 \u062A\u0645 \u0627\u0644\u0625\u0631\u0633\u0627\u0644' : '\u0627\u0644\u062E\u0637\u0648\u0629 ' + state.step + ' \u0645\u0646 6';
+  }
+
+  function goTo(step){
+    state.step = step;
+    document.querySelectorAll('[data-step]').forEach(function(el){
+      el.style.display = (el.getAttribute('data-step') == step) ? '' : 'none';
+    });
+    paintProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.addEventListener('click', function(e){
+    var choice = e.target.closest('[data-choice]');
+    if (choice){
+      var group = choice.getAttribute('data-choice');
+      var value = choice.getAttribute('data-value');
+      if (choice.hasAttribute('data-multi')){
+        var arr = state[group];
+        var idx = arr.indexOf(value);
+        if (idx === -1) arr.push(value); else arr.splice(idx, 1);
+      } else {
+        state[group] = value;
+      }
+      paintGroup(group);
+      paintButtons();
+      return;
+    }
+    var next = e.target.closest('[data-next]');
+    if (next && !next.disabled){ goTo(parseInt(next.getAttribute('data-next'), 10)); return; }
+    var back = e.target.closest('[data-back]');
+    if (back){ goTo(parseInt(back.getAttribute('data-back'), 10)); return; }
+    var submit = e.target.closest('[data-submit]');
+    if (submit && !submit.disabled){ submitForm(); return; }
+  });
+
+  document.addEventListener('input', function(e){
+    var field = e.target.getAttribute && e.target.getAttribute('data-field');
+    if (field){ state[field] = e.target.value; paintButtons(); }
+  });
+
+  function submitForm(){
+    if (!step6Valid()) return;
+    state.submitted = true;
+
+    // Lead payload — ready for backend wiring (Step 4 of the plan):
+    var lead = {
+      clinicType: state.clinicType, mainService: state.mainService,
+      currentBookings: state.currentBookings, bigChallenge: state.bigChallenge,
+      adBudget: state.adBudget, name: state.nameField, clinic: state.clinicField,
+      phone: state.phoneField, city: state.cityField, extra: state.extraField,
+      submittedAt: new Date().toISOString()
+    };
+    // TODO: send `lead` to a form backend (to be connected in the next step)
+    window.__lastLead = lead;
+
+    var form = document.querySelector('[data-view="form"]');
+    var confirm = document.querySelector('[data-view="confirm"]');
+    if (form) form.style.display = 'none';
+    if (confirm) confirm.style.display = '';
+    paintProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+})();
+</script>
+</body>
+</html>
