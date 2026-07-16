@@ -246,7 +246,7 @@ html,body{margin:0;padding:0;background:#04111F;}
     </div>
 
     <!-- RIGHT: FORM -->
-    <div style="padding:var(--formSidePad);display:flex;flex-direction:column;justify-content:center;">
+    <div id="form-panel" style="padding:var(--formSidePad);display:flex;flex-direction:column;justify-content:center;">
 
       <div style="background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.25);border-right:3px solid #F5C842;border-radius:10px;padding:14px 18px;margin-bottom:32px;font-size:13px;color:#F5C842;font-weight:700;line-height:1.6;">
         ⚠️ <strong>تنبيه مهم:</strong>
@@ -529,6 +529,10 @@ html,body{margin:0;padding:0;background:#04111F;}
   </div>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){ emailjs.init({ publicKey: 'H8RjXTquDRdA_8BX1' }); })();
+</script>
 <script>
 (function(){
   var SEL = { bg:'rgba(46,158,245,0.12)', border:'#2E9EF5', checkBg:'#2E9EF5', mark:'\u2713' };
@@ -587,13 +591,23 @@ html,body{margin:0;padding:0;background:#04111F;}
     if (label) label.textContent = state.submitted ? '\uD83C\uDF89 \u062A\u0645 \u0627\u0644\u0625\u0631\u0633\u0627\u0644' : '\u0627\u0644\u062E\u0637\u0648\u0629 ' + state.step + ' \u0645\u0646 6';
   }
 
+  function scrollToForm(){
+    var panel = document.getElementById('form-panel');
+    if (panel) {
+      var top = panel.getBoundingClientRect().top + window.pageYOffset - 16;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   function goTo(step){
     state.step = step;
     document.querySelectorAll('[data-step]').forEach(function(el){
       el.style.display = (el.getAttribute('data-step') == step) ? '' : 'none';
     });
     paintProgress();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToForm();
   }
 
   document.addEventListener('click', function(e){
@@ -639,6 +653,24 @@ html,body{margin:0;padding:0;background:#04111F;}
     };
     // TODO: send `lead` to a form backend (to be connected in the next step)
     window.__lastLead = lead;
+
+    // Send email notification via EmailJS
+    if (window.emailjs) {
+      emailjs.send('service_una9yo3', 'template_hru8dcd', {
+        to_email: 'ehjezlimedia@gmail.com',
+        name: state.nameField,
+        clinic: state.clinicField,
+        phone: state.phoneField,
+        city: state.cityField,
+        clinic_type: state.clinicType.join('، '),
+        main_service: state.mainService.join('، '),
+        current_bookings: state.currentBookings,
+        big_challenge: state.bigChallenge.join('، '),
+        ad_budget: state.adBudget,
+        extra: state.extraField || '—',
+        submitted_at: new Date().toLocaleString('ar-SA', {timeZone:'Asia/Riyadh'})
+      }).catch(function(err){ console.warn('EmailJS error:', err); });
+    }
 
     var form = document.querySelector('[data-view="form"]');
     var confirm = document.querySelector('[data-view="confirm"]');
