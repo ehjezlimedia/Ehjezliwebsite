@@ -594,10 +594,7 @@ html,body{margin:0;padding:0;background:#04111F;}
   function scrollToForm(){
     var panel = document.getElementById('form-panel');
     if (panel) {
-      var top = panel.getBoundingClientRect().top + window.pageYOffset - 16;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
