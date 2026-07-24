@@ -207,6 +207,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1017100406597504');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Booking Form'});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1017100406597504&ev=PageView&noscript=1"
@@ -667,6 +668,9 @@ src="https://www.facebook.com/tr?id=1017100406597504&ev=PageView&noscript=1"
     };
     // TODO: send `lead` to a form backend (to be connected in the next step)
     window.__lastLead = lead;
+
+    // Track form submission in Meta Pixel
+    if(window.fbq) fbq('track', 'Lead', {content_name: 'Booking Form Submitted'});
 
     // Send email notification via EmailJS
     if (window.emailjs) {
